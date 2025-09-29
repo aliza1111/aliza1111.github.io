@@ -1,0 +1,886 @@
+/* Section Styles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Skills Section */
+.skills {
+    padding: 5rem 0;
+    background: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Projects Section */
+.projects {
+    padding: 5rem 0;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.project-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+    background: #f8f9fa;
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #764ba2;
+}
+
+/* Detail Project Button */
+.btn-detail {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-detail:active {
+    transform: translateY(0);
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+    background: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-items {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.contact-item i {
+    color: #667eea;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-family: inherit;
+    background: white;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 5rem 0;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.certificates-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0 60px;
+}
+
+.certificates-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.certificates-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+}
+
+.certificate-item {
+    min-width: 350px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-image:hover img {
+    transform: scale(1.05);
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+.certificate-overlay i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-overlay span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.certificate-image:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.certificate-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.certificate-info h3 {
+    color: #333;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.cert-date {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Slider Navigation */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slider-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #667eea;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    background: #f8f9fa;
+}
+
+.modal-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.modal-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.modal-info p {
+    color: #666;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design for Certificates */
+@media (max-width: 768px) {
+    .certificates-slider {
+        padding: 0 50px;
+    }
+    
+    .certificates-container {
+        gap: 1rem;
+    }
+    
+    .certificate-item {
+        min-width: 280px;
+    }
+    
+    .certificate-info {
+        padding: 1.5rem;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .modal-info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-slider {
+        padding: 0 40px;
+    }
+    
+    .certificate-item {
+        min-width: 250px;
+    }
+    
+    .certificate-image {
+        height: 200px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .prev-btn {
+        left: 2px;
+    }
+    
+    .next-btn {
+        right: 2px;
+    }
+    
+    .modal-info h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Project Detail Modal Styles */
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.project-modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideInUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.project-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 500px;
+}
+
+.project-detail-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+    padding: 2rem;
+}
+
+.project-detail-image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-detail-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-date {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-category {
+    background: #f3e5f5;
+    color: #7b1fa2;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-detail-description h3,
+.project-detail-features h3,
+.project-detail-tech h3 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-detail-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-detail-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+}
+
+.project-detail-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-detail-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-detail-links .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-detail-links .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.project-detail-links .btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.project-detail-links .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design for Project Modal */
+@media (max-width: 768px) {
+    .project-modal-content {
+        width: 95%;
+        margin: 5% auto;
+        max-height: 95vh;
+    }
+    
+    .project-detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-detail-image {
+        border-radius: 15px 15px 0 0;
+        padding: 1.5rem;
+    }
+    
+    .project-detail-info {
+        padding: 1.5rem;
+    }
+    
+    .project-detail-links {
+        flex-direction: column;
+    }
+    
+    .project-detail-links .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Professional portfolio website with modern design and responsive layout",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "git add . && git commit -m 'Update portfolio' && git push origin main",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "minify-js": "uglifyjs script.js -o script.min.js",
+    "optimize": "npm run minify-css && npm run minify-js"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "html",
+    "css",
+    "javascript",
+    "github-pages"
+  ],
+  "author": "Your Name <fidya.aliza23@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://yourusername.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/yourusername.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/yourusername.github.io/issues"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

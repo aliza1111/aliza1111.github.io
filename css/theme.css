@@ -1,0 +1,202 @@
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .container {
+    color: #e0e0e0;
+}
+
+body.dark-theme p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .navbar {
+    background: rgba(20, 20, 20, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .nav-link {
+    color: #e0e0e0;
+}
+
+body.dark-theme .bar {
+    background: #e0e0e0;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+body.dark-theme .hero-title {
+    color: #e0e0e0;
+}
+
+body.dark-theme .hero-description {
+    color: #b0b0b0;
+}
+
+body.dark-theme .section-title {
+    color: #e0e0e0;
+}
+
+body.dark-theme .about {
+    background: #1a1a1a;
+}
+
+body.dark-theme .about-text p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .stat {
+    background: #2a2a2a;
+}
+
+body.dark-theme .stat p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .skills {
+    background: #2a2a2a;
+}
+
+body.dark-theme .skill-category {
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .skill-category h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .projects {
+    background: #1a1a1a;
+}
+
+body.dark-theme .project-card {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .project-content h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .project-content p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .project-tech span {
+    background: #3a3a3a;
+}
+
+body.dark-theme .contact {
+    background: #2a2a2a;
+}
+
+body.dark-theme .contact-info h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .contact-info p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .contact-item {
+    color: #b0b0b0;
+}
+
+body.dark-theme .contact-form {
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-theme footer.py-4 {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+body.dark-theme .text-muted {
+    color: #adb5bd;
+}
+
+body.dark-theme .theme-toggle {
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+body.dark-theme .theme-toggle:hover {
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Certificates Section Dark Mode */
+body.dark-theme .certificates {
+    background: #1a1a1a;
+}
+
+body.dark-theme .certificate-item {
+    background: #2a2a2a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .certificate-info h3 {
+    color: #e0e0e0;
+}
+
+/* Project Detail Modal Dark Mode */
+body.dark-theme .project-modal-content {
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .project-detail-info {
+    background: #1a1a1a;
+}
+
+body.dark-theme .project-detail-info h2 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .project-detail-description h3,
+body.dark-theme .project-detail-features h3,
+body.dark-theme .project-detail-tech h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .project-detail-description p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .project-detail-features li {
+    color: #b0b0b0;
+}
+
+body.dark-theme .project-date {
+    background: #2a4a6b;
+    color: #87ceeb;
+}
+
+body.dark-theme .project-category {
+    background: #4a2a4a;
+    color: #dda0dd;
+}
+
+/* Certificate Modal Dark Mode */
+body.dark-theme .modal-content {
+    background: #1a1a1a;
+}
+
+body.dark-theme .modal-info h3 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .modal-info p {
+    color: #b0b0b0;
+}

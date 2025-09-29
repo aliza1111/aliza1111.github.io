@@ -1,0 +1,43 @@
+# GitHub Pages Configuration
+# Configuration for static HTML portfolio on GitHub Pages
+
+# Site settings
+title: "FIDYA NUR ALIZA - Portfolio"
+description: "Professional portfolio website showcasing web development and design projects"
+author: "FIDYA NUR ALIZA"
+email: "fidya.aliza23@gmail.com"
+url: "https://portofolioaliza.github.io"
+baseurl: ""
+
+# Build settings for static HTML
+markdown: kramdown
+highlighter: rouge
+theme: null # Disable Jekyll theme for static HTML
+
+# Disable Jekyll processing for static files
+include: []
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+  - HOSTING_GUIDE.md
+  - LOCAL_TESTING_GUIDE.md
+  - PROJECT_DOCUMENTATION.md
+  - MODULAR_STRUCTURE.md
+  - DEMO_INSTRUCTIONS.md
+  - portofolioaliza.github.io/
+
+# Disable Jekyll plugins
+plugins: []
+
+# SEO settings
+seo:
+  type: "Person"
+  name: "FIDYA NUR ALIZA"
+  same_as:
+    - "https://linkedin.com/in/fidya-nur-aliza"
+    - "https://github.com/portofolioaliza"
