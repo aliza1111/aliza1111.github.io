@@ -448,7 +448,8 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form">
+                    
+                    <form id="contact-form" action="https://formspree.io/f/mzklwqrn" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -844,21 +845,146 @@
                 const subject = formData.get('subject');
                 const message = formData.get('message');
                 
-                // Simple validation
-                if (!name || !email || !subject || !message) {
-                    alert('Please fill in all fields');
+                // Clear previous error messages
+                clearFormErrors();
+                
+                // Validation
+                let isValid = true;
+                
+                if (!name.trim()) {
+                    showFieldError('name', 'Name is required');
+                    isValid = false;
+                }
+                
+                if (!email.trim()) {
+                    showFieldError('email', 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(email)) {
+                    showFieldError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                if (!subject.trim()) {
+                    showFieldError('subject', 'Subject is required');
+                    isValid = false;
+                }
+                
+                if (!message.trim()) {
+                    showFieldError('message', 'Message is required');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
                     return;
                 }
                 
-                if (!isValidEmail(email)) {
-                    alert('Please enter a valid email address');
-                    return;
-                }
+                // Show loading state
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
                 
-                // Simulate form submission
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                this.reset();
+                // Try to submit to Formspree first, then fallback to other methods
+                fetch('https://formspree.io/f/mzklwqrn', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success with Formspree
+                        showSuccessMessage('Message sent successfully via email!');
+                        this.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    } else {
+                        throw new Error('Formspree submission failed');
+                    }
+                })
+                .catch(error => {
+                    // Fallback to mailto and WhatsApp
+                    console.log('Formspree failed, using fallback methods:', error);
+                    
+                    showSuccessMessage('Opening email client and WhatsApp...');
+                    
+                    // Option 1: Direct mailto
+                    const mailtoLink = `mailto:fidya.aliza23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+                    window.open(mailtoLink, '_blank');
+                    
+                    // Option 2: WhatsApp as backup
+                    setTimeout(() => {
+                        const whatsappMessage = `Hi Fidya! I'm ${name} (${email}).\n\nSubject: ${subject}\n\nMessage: ${message}`;
+                        const whatsappLink = `https://wa.me/6283154961739?text=${encodeURIComponent(whatsappMessage)}`;
+                        window.open(whatsappLink, '_blank');
+                    }, 1000);
+                    
+                    // Reset form
+                    this.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
             });
+        }
+        
+        // Helper functions for form validation
+        function showFieldError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const formGroup = field.closest('.form-group');
+            
+            // Remove existing error
+            const existingError = formGroup.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
+            // Add error message
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            formGroup.appendChild(errorDiv);
+            
+            // Add error styling
+            field.classList.add('error');
+        }
+        
+        function clearFormErrors() {
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(msg => msg.remove());
+            
+            const errorFields = document.querySelectorAll('.form-group input.error, .form-group textarea.error');
+            errorFields.forEach(field => field.classList.remove('error'));
+        }
+        
+        function showSuccessMessage(customMessage = null) {
+            // Create success notification
+            const notification = document.createElement('div');
+            notification.className = 'form-notification success';
+            const message = customMessage || 'Thank you for your message! I\'ll get back to you soon.';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas fa-check-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            // Add to contact section
+            const contactSection = document.querySelector('.contact');
+            contactSection.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+            
+            // Also show in browser's default email client
+            console.log('Form submitted successfully.');
         }
 
         // Email validation function
@@ -866,6 +992,21 @@
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
+        
+        // Contact methods functions
+        function openEmail() {
+            const subject = 'Hello from Portfolio Website';
+            const body = 'Hi Fidya,\n\nI came across your portfolio and would like to connect with you.\n\nBest regards,';
+            const mailtoLink = `mailto:fidya.aliza23@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink, '_blank');
+        }
+        
+        function openWhatsApp() {
+            const message = 'Hi Fidya! I came across your portfolio and would like to connect with you.';
+            const whatsappLink = `https://wa.me/6283154961739?text=${encodeURIComponent(message)}`;
+            window.open(whatsappLink, '_blank');
+        }
+        
 
         console.log('Portfolio loaded successfully with all features!');
     </script>
