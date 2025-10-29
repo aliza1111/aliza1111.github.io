@@ -4,7 +4,7 @@ const projectData = {
         title: 'Tabematsu Studio Web Profile',
         date: '2025',
         category: 'Full-Stack Web Development',
-        image: 'images/projects/tabematsu.png',
+        image: 'images/projects/Tabematsu.png',
         description: 'A modern full-stack e-commerce website for Tabematsu Studio featuring merchandise sales, game portfolio, and secure payment processing with Midtrans integration.',
         features: [
             'Dynamic product catalog and order system',
@@ -59,7 +59,7 @@ const projectData = {
         title: 'Blood Stock Management System',
         date: '2023',
         category: 'Health Information System',
-        image: 'images/projects/donor.png',
+        image: 'images/projects/pandas.png',
         description: 'A web-based application designed to manage and monitor blood donor inventory for health organizations. Developed using PHP and CodeIgniter with an intuitive admin interface.',
         features: [
             'Donor registration and data management',
@@ -77,7 +77,7 @@ const projectData = {
         title: 'Website Profil Dusun Karangber',
         date: '2023',
         category: 'Web Development',
-        image: 'images/projects/karangber.png',
+        image: 'images/projects/Karangber.png',
         description: 'An informative website for Dusun Karangber, developed using WordPress to promote village transparency and showcase local activities, events, and demographics.',
         features: [
             'Responsive website design',
@@ -113,7 +113,7 @@ const projectData = {
         title: 'HUMID (Huanglongbing Mobile Diagnostic)',
         date: '2022',
         category: 'Research & UI/UX Design',
-        image: 'images/projects/humid.png',
+        image: 'images/projects/Humid.png',
         description: 'A mobile diagnostic concept app designed for early detection of the Huanglongbing citrus disease. I contributed as a researcher and UI/UX designer to create an intuitive diagnostic flow.',
         features: [
             'Mobile diagnostic interface prototype',
