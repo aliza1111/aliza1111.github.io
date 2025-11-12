@@ -3,7 +3,7 @@ const projectData = {
     'ecommerce': {
         title: 'Tabematsu Studio Web Profile',
         date: '2025',
-        category: 'Full-Stack Web Development',
+        category: 'Full-Stack Web Developer',
         image: 'images/projects/Tabematsu.png',
         description: 'A modern full-stack e-commerce website for Tabematsu Studio featuring merchandise sales, game portfolio, and secure payment processing with Midtrans integration.',
         features: [
@@ -22,7 +22,7 @@ const projectData = {
     'mobile-dashboard': {
         title: 'PEMANTIK (Penyusunan Metadata Statistik)',
         date: '2024',
-        category: 'System Analysis & Web Development',
+        category: 'System Analysis & Web Developer',
         image: 'images/projects/pemantik.png',
         description: 'A metadata management application built for BPS (Central Statistics Agency). I worked as a System Analyst responsible for designing workflows, data structures, and UI prototypes.',
         features: [
@@ -40,7 +40,7 @@ const projectData = {
     'analytics': {
         title: 'SI-POLAN (Polisi Andalan) Mobile App',
         date: '2024',
-        category: 'Mobile Development',
+        category: 'Project Leader & Machine Learning Engineer',
         image: 'images/projects/sipolan.png',
         description: 'A machine learning-based mobile application designed to detect and report traffic violations automatically, supporting law enforcement in improving public road safety.',
         features: [
@@ -58,7 +58,7 @@ const projectData = {
     'database': {
         title: 'Blood Stock Management System',
         date: '2023',
-        category: 'Health Information System',
+        category: 'Project Management & Web Developer',
         image: 'images/projects/pandas.png',
         description: 'A web-based application designed to manage and monitor blood donor inventory for health organizations. Developed using PHP and CodeIgniter with an intuitive admin interface.',
         features: [
@@ -76,7 +76,7 @@ const projectData = {
     'inventory': {
         title: 'Website Profil Dusun Karangber',
         date: '2023',
-        category: 'Web Development',
+        category: 'Web Developer',
         image: 'images/projects/Karangber.png',
         description: 'An informative website for Dusun Karangber, developed using WordPress to promote village transparency and showcase local activities, events, and demographics.',
         features: [
@@ -94,7 +94,7 @@ const projectData = {
     'lms': {
         title: 'Resident Demographic Data Dashboard',
         date: '2023',
-        category: 'Data Visualization',
+        category: 'Data Entry & Data Visualization',
         image: 'images/projects/dashboard.png',
         description: 'An interactive data visualization dashboard designed to present demographic statistics using Looker Studio. I contributed as a Data Entry, Analyst, and Visualization designer, focusing on clean data presentation and analytical insight.',
         features: [
